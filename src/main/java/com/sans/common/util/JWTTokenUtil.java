@@ -17,6 +17,11 @@ import java.util.*;
 public class JWTTokenUtil {
 
     /**
+     * 私有化构造器
+     */
+    private JWTTokenUtil(){}
+
+    /**
      * 生成Token
      * @Author Sans
      * @CreateTime 2019/10/2 12:16
@@ -27,8 +32,13 @@ public class JWTTokenUtil {
         // 登陆成功生成JWT
         String token = Jwts.builder()
                 // 放入用户名和用户ID
-                .setSubject(selfUserEntity.getUsername())
                 .setId(selfUserEntity.getUserId()+"")
+                // 主题
+                .setSubject(selfUserEntity.getUsername())
+                // 签发时间
+                .setIssuedAt(new Date())
+                // 签发者
+                .setIssuer("sans")
                 // 自定义属性 放入用户拥有权限
                 .claim("authorities", JSON.toJSONString(selfUserEntity.getAuthorities()))
                 // 失效时间

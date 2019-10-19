@@ -19,7 +19,6 @@ import javax.servlet.http.HttpServletResponse;
 @Slf4j
 @Component
 public class UserLoginFailureHandler implements AuthenticationFailureHandler {
-
     /**
      * 登录失败返回结果
      * @Author Sans
@@ -40,6 +39,6 @@ public class UserLoginFailureHandler implements AuthenticationFailureHandler {
             log.info("【登录失败】"+exception.getMessage());
             ResultUtil.responseJson(response,ResultUtil.resultCode(500,"用户名密码不正确"));
         }
-        ResultUtil.responseJson(response,ResultUtil.resultCode(500,"账号密码错误"));
+        ResultUtil.responseJson(response,ResultUtil.resultCode(500,"登录失败"));
     }
 }

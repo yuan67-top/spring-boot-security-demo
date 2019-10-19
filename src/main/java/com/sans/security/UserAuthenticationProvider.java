@@ -27,12 +27,10 @@ import java.util.Set;
  */
 @Component
 public class UserAuthenticationProvider implements AuthenticationProvider {
-
     @Autowired
     private SelfUserDetailsService selfUserDetailsService;
     @Autowired
     private SysUserService sysUserService;
-
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
         // 获取表单输入中返回的用户名
@@ -63,7 +61,6 @@ public class UserAuthenticationProvider implements AuthenticationProvider {
         // 进行登录
         return new UsernamePasswordAuthenticationToken(userInfo, password, authorities);
     }
-
     @Override
     public boolean supports(Class<?> authentication) {
         return true;

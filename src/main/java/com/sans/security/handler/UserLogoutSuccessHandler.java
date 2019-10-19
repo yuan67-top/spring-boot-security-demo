@@ -11,13 +11,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 用户登出类
+ * 登出成功处理类
  * @Author Sans
  * @CreateTime 2019/10/3 9:42
  */
 @Component
 public class UserLogoutSuccessHandler implements LogoutSuccessHandler {
-
     /**
      * 用户登出返回结果
      * 这里应该让前端清除掉Token

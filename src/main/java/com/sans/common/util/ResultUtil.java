@@ -16,6 +16,11 @@ import java.util.Map;
 public class ResultUtil {
 
     /**
+     * 私有化构造器
+     */
+    private ResultUtil(){}
+
+    /**
      * 使用response输出JSON
      * @Author Sans
      * @CreateTime 2019/9/28 11:23

@@ -21,7 +21,6 @@ import java.util.Map;
 @Slf4j
 @Component
 public class UserLoginSuccessHandler implements AuthenticationSuccessHandler {
-
     /**
      * 登录成功返回结果
      * @Author Sans

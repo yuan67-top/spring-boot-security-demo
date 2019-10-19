@@ -14,7 +14,6 @@ import javax.servlet.http.HttpServletResponse;
  */
 @Component
 public class UserAuthenticationEntryPointHandler implements AuthenticationEntryPoint {
-
     /**
      * 用户未登录返回结果
      * @Author Sans

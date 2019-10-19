@@ -84,5 +84,4 @@ public class JWTAuthenticationTokenFilter extends BasicAuthenticationFilter {
         filterChain.doFilter(request, response);
         return;
     }
-
 }
