@@ -117,8 +117,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 // 配置没有权限自定义处理类
                 .exceptionHandling().accessDeniedHandler(userAuthAccessDeniedHandler)
                 .and()
+                // 开启跨域
+                .cors()
+                .and()
                 // 取消跨站请求伪造防护
                 .csrf().disable();
+
         // 基于Token不需要session
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         // 禁用缓存
